@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import DatabaseTest from './components/DatabaseTest';
 
 function App() {
   return (
@@ -7,10 +8,13 @@ function App() {
       <div className="mobile-wrapper">
         <div className="app-container">
           <header className="app-header">
-            <h1>Hello World</h1>
+            <h1>Cleared</h1>
+            <p style={{ fontSize: '16px', margin: '10px 0 0 0', opacity: 0.9 }}>
+              Database Connection Test
+            </p>
           </header>
-          <main className="app-content">
-            <p>Welcome to Cleared</p>
+          <main className="app-content" style={{ padding: '0', alignItems: 'stretch', justifyContent: 'flex-start' }}>
+            <DatabaseTest />
           </main>
         </div>
       </div>
