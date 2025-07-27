@@ -1,0 +1,88 @@
+.doctor-profile {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 0 0 16px 16px;
+  margin: -20px -20px 20px -20px;
+  padding: 44px 40px 24px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.doctor-profile-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.doctor-info {
+  flex: 1;
+  max-width: 200px;
+}
+
+.section-title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #171a1f;
+  margin: 0 0 8px 0;
+}
+
+.hospital-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.05em;
+  color: #f96855 !important;
+  margin: 0 0 4px 0;
+}
+
+.doctor-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.05em;
+  color: #171a1f !important;
+  margin: 0 0 8px 0;
+}
+
+.consultation-info,
+.consultation-hours {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.05em;
+  color: #171a1f !important;
+  margin: 0 0 4px 0;
+}
+
+.change-doctor-btn {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  color: #8e8e93;
+  background: none;
+  border: none;
+  padding: 8px 0 0 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.doctor-image {
+  position: relative;
+  width: 120px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  /* Remove background using CSS filter for now */
+  filter: contrast(1.1) brightness(1.05);
+}

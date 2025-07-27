@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import './Layout.css';
+import React, { useState } from "react";
+import "./Layout.css";
+import DoctorProfile from "./DoctorProfile";
 
 interface LayoutProps {}
 
 const Layout: React.FC<LayoutProps> = () => {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'record'>('dashboard');
+  const [activeTab, setActiveTab] = useState<"dashboard" | "record">(
+    "dashboard"
+  );
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'dashboard':
+      case "dashboard":
         return (
           <div className="content-section">
-            <h2>내 건강</h2>
-            <p>다가오는 진료 예약, 건강 요약, 빠른 작업을 확인할 수 있습니다.</p>
+            <DoctorProfile />
             <div className="mock-card">
               <h3>Next Appointment</h3>
               <p>Dr. 김의사 - Tomorrow 2:00 PM</p>
@@ -29,12 +31,15 @@ const Layout: React.FC<LayoutProps> = () => {
             {Array.from({ length: 20 }, (_, i) => (
               <div key={i} className="mock-card">
                 <h4>Sample Content {i + 1}</h4>
-                <p>This is sample content to test the sticky navigation behavior when scrolling.</p>
+                <p>
+                  This is sample content to test the sticky navigation behavior
+                  when scrolling.
+                </p>
               </div>
             ))}
           </div>
         );
-      case 'record':
+      case "record":
         return (
           <div className="content-section">
             <h2>진료기록</h2>
@@ -55,7 +60,10 @@ const Layout: React.FC<LayoutProps> = () => {
             {Array.from({ length: 15 }, (_, i) => (
               <div key={i} className="mock-card">
                 <h4>Medical Record {i + 1}</h4>
-                <p>This is sample medical record content to test the sticky navigation behavior.</p>
+                <p>
+                  This is sample medical record content to test the sticky
+                  navigation behavior.
+                </p>
               </div>
             ))}
           </div>
@@ -84,14 +92,16 @@ const Layout: React.FC<LayoutProps> = () => {
         {/* Tab Navigator */}
         <nav className="tab-navigator">
           <button
-            className={`tab-button ${activeTab === 'dashboard' ? 'active' : ''}`}
-            onClick={() => setActiveTab('dashboard')}
+            className={`tab-button ${
+              activeTab === "dashboard" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("dashboard")}
           >
             내 건강
           </button>
           <button
-            className={`tab-button ${activeTab === 'record' ? 'active' : ''}`}
-            onClick={() => setActiveTab('record')}
+            className={`tab-button ${activeTab === "record" ? "active" : ""}`}
+            onClick={() => setActiveTab("record")}
           >
             진료기록
           </button>
@@ -99,9 +109,7 @@ const Layout: React.FC<LayoutProps> = () => {
       </header>
 
       {/* Main Content */}
-      <main className="main-content">
-        {renderContent()}
-      </main>
+      <main className="main-content">{renderContent()}</main>
     </div>
   );
 };
