@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './DoctorProfile.css';
 
-const DoctorProfile: React.FC = () => {
+interface DoctorProfileProps {
+  onBookAppointment: () => void;
+}
+
+const DoctorProfile: React.FC<DoctorProfileProps> = ({ onBookAppointment }) => {
   return (
     <div className="doctor-profile">
       <div className="doctor-profile-content">
@@ -12,6 +17,9 @@ const DoctorProfile: React.FC = () => {
           <p className="consultation-info">내과 전문의</p>
           <p className="consultation-hours">월~금 9:00 ~ 17:00</p>
           <button className="change-doctor-btn">의사 변경하기</button>
+          <button className="book-appointment-btn" onClick={onBookAppointment}>
+            예약하기
+          </button>
         </div>
         <div className="doctor-image">
           <img src="/doctor-photo.jpg" alt="장윤희 의사" />

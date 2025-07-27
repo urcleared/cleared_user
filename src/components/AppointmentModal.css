@@ -1,0 +1,150 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 390px;
+  border-radius: 20px 20px 0 0;
+  padding: 24px;
+  animation: slideUp 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #171A1F;
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #8E8E93;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.modal-body p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 24px;
+  letter-spacing: -0.05em;
+}
+
+.appointment-form {
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #171A1F;
+  margin-bottom: 8px;
+  letter-spacing: -0.05em;
+}
+
+.date-input,
+.time-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.05em;
+  background-color: #f8f9fa;
+}
+
+.date-input:focus,
+.time-select:focus {
+  outline: none;
+  border-color: #007AFF;
+  background-color: #ffffff;
+}
+
+.confirm-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #007AFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .modal-backdrop {
+    align-items: center;
+  }
+  
+  .modal-content {
+    border-radius: 20px;
+    margin: 20px;
+  }
+}

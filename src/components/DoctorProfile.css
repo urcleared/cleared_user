@@ -70,6 +70,25 @@
   text-decoration: underline;
 }
 
+.book-appointment-btn {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  background-color: #007AFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-appointment-btn:hover {
+  background-color: #0056b3;
+}
+
 .doctor-image {
   position: relative;
   width: 120px;
